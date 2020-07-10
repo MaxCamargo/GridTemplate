@@ -1,0 +1,312 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,700;0,900;1,200;1,400&family=Notable&display=swap");
+body {
+  font-family: "Muli", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.my_own_class {
+  font-family: "devicons";
+}
+
+.my_own_class:before {
+  content: "";
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 500px;
+}
+.container2 .slider-title {
+  grid-area: 2/2/3/6;
+  align-self: end;
+}
+.container2 .text-slider {
+  grid-area: 3/2/4/8;
+  align-self: start;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(16, auto);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0px;
+  height: auto;
+}
+
+.header {
+  grid-area: 1/1/2/13;
+  background: #dcdfe0;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0.5rem;
+}
+.header .headlogo {
+  grid-area: 2/2/4/4;
+  background-color: lightgreen;
+  font-weight: 900;
+  font-size: 21px;
+  justify-self: start;
+  align-self: center;
+}
+.header .insta {
+  grid-area: 2/10/4/11;
+  align-self: center;
+  justify-self: center;
+}
+.header .insta a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+.header .contact {
+  grid-area: 2/11/4/12;
+  justify-self: center;
+  height: 20px;
+  background: black;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 60px;
+}
+.header .contact a {
+  color: white;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.menu {
+  grid-area: 2/1/3/13;
+  background: #3a3a3a;
+  height: 85px;
+}
+
+.slider {
+  grid-area: 3/1/8/13;
+  background-color: #c5c5c5;
+  height: 500px;
+}
+
+.section {
+  grid-area: 8/1/9/13;
+  background: #ececec;
+  height: 600px;
+}
+.section .wrapper {
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+  height: 600px;
+}
+.section .wrapper .foto1 {
+  grid-area: 3/3/10/10;
+  background-color: gainsboro;
+}
+.section .wrapper .text-foto1 {
+  grid-area: 3/11/6/19;
+}
+.section .wrapper .foto2 {
+  grid-area: 12/3/20/10;
+  background-color: gainsboro;
+}
+.section .wrapper .text-foto2 {
+  grid-area: 12/11/16/19;
+}
+
+.btn5 {
+  grid-area: 9/1/13/4;
+  background-color: #dcdfe0;
+  height: 400px;
+}
+
+.btn6 {
+  grid-area: 9/4/13/7;
+  background-color: #e0e0e0;
+}
+
+.btn7 {
+  grid-area: 9/7/13/10;
+  background-color: #c5c5c5;
+}
+
+.btn8 {
+  grid-area: 9/10/13/13;
+  background-color: #949494;
+}
+
+.footer {
+  grid-area: 13/1/16/13;
+  background-color: #000000;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(16, auto);
+  height: 500px;
+}
+.footer .text-footer {
+  grid-area: 15/5/16/9;
+  height: auto;
+  width: auto;
+  text-align: center;
+  align-self: center;
+}
+.footer .text-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+.btn-body .btn {
+  height: 26px;
+  background: black;
+  border-radius: 40px;
+  align-self: flex-end;
+  border: none;
+}
+.btn-body a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+/*media query*/
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "menu" "slider" "section" "btn5" "btn6" "btn7" "btn8" "footer";
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0px;
+    height: auto;
+  }
+
+  .header {
+    grid-area: 1/1/2/13;
+    background: #dcdfe0;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .header .headlogo {
+    grid-area: 2/2/4/4;
+    background-color: lightgreen;
+    font-weight: 900;
+    font-size: 16px;
+    justify-self: start;
+    align-self: center;
+  }
+  .header .insta {
+    grid-area: 2/11/4/13;
+  }
+  .header .contact {
+    grid-area: 2/14/4/19;
+    justify-self: center;
+    height: 20px;
+    background: black;
+    width: 100%;
+    text-align: center;
+    border-radius: 60px;
+    font-size: 16px;
+  }
+
+  .menu {
+    grid-area: menu;
+    background: #3a3a3a;
+    height: 85px;
+  }
+
+  .slider {
+    grid-area: slider;
+    height: 300px;
+  }
+  .slider .container2 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 300px;
+    justify-items: center;
+  }
+  .slider .container2 .slider-title {
+    grid-area: 3/2/4/8;
+    font-size: 21px;
+  }
+  .slider .container2 .text-slider {
+    text-align: center;
+    grid-area: 4/2/5/8;
+    font-size: 14px;
+  }
+
+  .section {
+    grid-area: section;
+    background: #ececec;
+    height: 600px;
+  }
+  .section .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    height: 600px;
+  }
+  .section .wrapper .foto1 {
+    grid-area: 2/3/5/11;
+    background-color: gainsboro;
+  }
+  .section .wrapper .text-foto1 {
+    grid-area: 6/3/7/11;
+    font-size: 14px;
+  }
+  .section .wrapper .foto2 {
+    grid-area: 8/3/11/11;
+    background-color: gainsboro;
+  }
+  .section .wrapper .text-foto2 {
+    grid-area: 12/3/12/11;
+    font-size: 14px;
+  }
+
+  .btn5 {
+    grid-area: btn5;
+    background-color: greenyellow;
+    height: 200px;
+  }
+
+  .btn6 {
+    grid-area: btn6;
+    background-color: hotpink;
+    height: 200px;
+  }
+
+  .btn7 {
+    grid-area: btn7;
+    background-color: indigo;
+    height: 200px;
+  }
+
+  .btn8 {
+    grid-area: btn8;
+    background-color: lightcoral;
+    height: 200px;
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: black;
+    height: 400px;
+  }
+}
+/*fin media query*/
+
+/*# sourceMappingURL=output.css.map */
